@@ -1,4 +1,4 @@
-from .func_speed import time, speed, distance
+from .func_speed import time, speed, distance, name
 
 
 def test_speed_calculation():
@@ -11,3 +11,7 @@ def test_time_calculation():
 
 def test_distance_calculation():
     assert distance(60, 4) == 240
+
+
+def test_name():
+    assert type(name()) == str
