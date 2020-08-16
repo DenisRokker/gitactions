@@ -1,13 +1,13 @@
-from gitactions import functions
+from .func_speed import time, speed, distance
 
 
 def test_speed_calculation():
-    assert functions.speed(100, 1) == 100
+    assert speed(100, 1) == 100
 
 
 def test_time_calculation():
-    assert functions.time(10, 5) == 2
+    assert time(10, 5) == 2
 
 
 def test_distance_calculation():
-    assert functions.distance(60, 4) == 240
+    assert distance(60, 4) == 240
