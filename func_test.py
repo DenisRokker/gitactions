@@ -22,7 +22,7 @@ def test_create_table():
     connect = psycopg2.connect(dbname="postgres",
                                user="postgres",
                                password="postgres",
-                               host='localhost')
+                               host='postgres')
     cursor = connect.cursor()
 
     cursor.execute('create table People('
