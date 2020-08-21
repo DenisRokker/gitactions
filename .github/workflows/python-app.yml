@@ -13,6 +13,7 @@ jobs:
   asf:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - name: 123
       run: |
         ls -lha
