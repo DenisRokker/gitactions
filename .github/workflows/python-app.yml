@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: 123
       run: |
-        ls
+        ls -lha
   build:
     runs-on: ubuntu-latest
     services:
