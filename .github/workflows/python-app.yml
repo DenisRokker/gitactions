@@ -40,4 +40,5 @@ jobs:
       env:
         TESTS_WEB_HOST: dockerhost
       run: |
+        sleep 2
         pytest -v
