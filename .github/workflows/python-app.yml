@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       dockerhost:
-        image: rokkerdenis/hello_world
+        image: rokkerdenis/hello_world:latest
         ports:
           - 8080:8080
     steps:
