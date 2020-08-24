@@ -23,7 +23,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     services:
-      dockerlhost:
+      dockerhost:
         image: rokkerdenis/hello_world
         ports:
           - 8080:8080
