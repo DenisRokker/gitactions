@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: build in docker
-      run: docker build -t hello_world
+      run: docker build -t hello_world .
   tests:
     runs-on: ubuntu-latest
     services:
