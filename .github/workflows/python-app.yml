@@ -40,6 +40,8 @@ jobs:
       run: netstat -nlpt
     - name: dh
       run: docker ps -a
+    - name: dlogs
+      run: docker logs $(docker ps -aq)
     - name: Test with pytest
       run: |
         sleep 2
