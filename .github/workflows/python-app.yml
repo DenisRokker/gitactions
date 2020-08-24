@@ -10,14 +10,13 @@ on:
     branches: [ master ]
 
 jobs:
-  asf:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: 123
-      run: |
-        ls -lha
-  build:
+    - name: build in docker
+      run: docker build -t hello_world
+  tests:
     runs-on: ubuntu-latest
     services:
       postgres:
