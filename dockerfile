@@ -2,4 +2,4 @@ FROM python:3.8
 
 COPY . .
 
-ENTRYPOINT ["python", "test.py"]
+ENTRYPOINT ["python", "hello_world.py"]
