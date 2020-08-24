@@ -17,7 +17,7 @@ jobs:
     - name: build in docker
       run: docker build -t hello_world .
     - name: add tag
-      run: docker tag 96c1c8cf87d8 rokkerdenis/hello_world:latest
+      run: docker tag hello_world:latest rokkerdenis/hello_world:latest
     - name: push to dockerhub
       run: docker push rokkerdenis/hello_world
     - name: run contain "hello"
