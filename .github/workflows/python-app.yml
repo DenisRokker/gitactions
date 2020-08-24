@@ -17,7 +17,7 @@ jobs:
     - name: build in docker
       run: docker build -t hello_world .
     - name: login to dockerhub
-      run: docker login -u rokkerdenis -p Seniord161219921
+      run: docker login -u ${{ secrets.username }} -p ${{ secrets.password }}
     - name: add tag
       run: docker tag hello_world:latest rokkerdenis/hello_world:latest
     - name: push to dockerhub
