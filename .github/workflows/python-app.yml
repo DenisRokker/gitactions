@@ -1,6 +1,3 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
 name: Python application
 
 on:
@@ -22,22 +19,14 @@ jobs:
       run: docker tag hello_world:latest rokkerdenis/hello_world:latest
     - name: push to dockerhub
       run: docker push rokkerdenis/hello_world
-    - name: run contain "hello"
-      run: docker run --name hello hello_world
+
   tests:
     runs-on: ubuntu-latest
     services:
-      postgres:
-        image: postgres
-        env:
-          POSTGRES_PASSWORD: postgres
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+      dockerlhost:
+        image: rokkerdenis/hello_world
         ports:
-          - 5432:5432
+          - 8080:8080
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
