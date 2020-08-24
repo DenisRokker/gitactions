@@ -21,6 +21,7 @@ jobs:
       run: docker push rokkerdenis/hello_world
 
   tests:
+    needs: build
     runs-on: ubuntu-latest
     services:
       web:
